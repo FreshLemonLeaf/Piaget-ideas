@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piget - Collecting Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="sidebar">
+            <div class="logo">
+                <h1>Piget</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active" data-view="bazar"><i class="fas fa-store"></i> Bazar</li>
+                    <li data-view="market"><i class="fas fa-shopping-cart"></i> Market</li>
+                    <li data-view="inventory"><i class="fas fa-box"></i> Inventory</li>
+                    <li data-view="stats"><i class="fas fa-chart-simple"></i> Stats</li>
+                    <li data-view="profile"><i class="fas fa-user"></i> Profile</li>
+                    <li data-view="settings"><i class="fas fa-gear"></i> Settings</li>
+                    <li data-view="credits"><i class="fas fa-award"></i> Credits</li>
+                    <li data-view="admin"><i class="fas fa-lock"></i> Admin Panel</li>
+                </ul>
+            </nav>
+            <div class="player-info">
+                <div class="coins">
+                    <i class="fas fa-coins"></i> <span id="coins-count">1000</span>
+                </div>
+                <div class="level">
+                    <i class="fas fa-star"></i> Level <span id="level">1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div id="bazar-view" class="view active">
+                <h2>Bazar</h2>
+                <div class="bazar-tabs">
+                    <button class="tab-btn active" data-tab="auction">Auction</button>
+                    <button class="tab-btn" data-tab="trade">Trade</button>
+                </div>
+                <div id="auction-tab" class="tab-content active">
+                    <div class="auction-items">
+                    </div>
+                </div>
+                <div id="trade-tab" class="tab-content">
+                    <div class="trade-items">
+                    </div>
+                </div>
+            </div>
+
+            <div id="market-view" class="view">
+                <h2>Market</h2>
+                <div class="market-items">
+                </div>
+            </div>
+
+            <div id="inventory-view" class="view">
+                <h2>Inventory</h2>
+                <div class="inventory-tabs">
+                    <button class="tab-btn active" data-tab="pigs">Pigs</button>
+                    <button class="tab-btn" data-tab="items">Items</button>
+                </div>
+                <div id="pigs-tab" class="tab-content active">
+                    <div class="pigs-inventory">
+                    </div>
+                </div>
+                <div id="items-tab" class="tab-content">
+                    <div class="items-inventory">
+                    </div>
+                </div>
+            </div>
+
+            <div id="stats-view" class="view">
+                <h2>Stats</h2>
+                <div class="stats-container">
+                </div>
+            </div>
+
+            <div id="profile-view" class="view">
+                <h2>Profile</h2>
+                <div class="profile-info">
+                </div>
+            </div>
+
+            <div id="settings-view" class="view">
+                <h2>Settings</h2>
+                <div class="settings-options">
+                </div>
+            </div>
+
+            <div id="credits-view" class="view">
+                <h2>Credits</h2>
+                <div class="credits-container">
+                </div>
+                <div class="team-members">
+                    <div class="team-member">
+                        <div class="member-avatar" style="background-color: #FFD166;"></div>
+                        <h3>Lemon</h3>
+                        <p>HOPEFULY A SOON TO BE DEV</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="admin-view" class="view">
+                <h2>Admin Panel</h2>
+                <div class="admin-tabs">
+                    <button class="tab-btn active" data-tab="colors">Colors</button>
+                    <button class="tab-btn" data-tab="game">Game Settings</button>
+                </div>
+                <div id="colors-tab" class="tab-content">
+                </div>
+                <div id="game-tab" class="tab-content">
+                </div>
+                <button id="admin-save-btn" class="admin-save-btn">Save Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
