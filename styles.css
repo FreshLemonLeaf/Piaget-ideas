@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #FF90B3;
+    --color-secondary: #ff4081;
+    --color-background: #f9f9f9;
+    --color-container: #f0f0f0;
+    --color-text: #333;
+}
+
+body {
+    font-family: 'Titan One', cursive;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    overflow: hidden;
+}
+
+.game-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.logo h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 #333;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+nav ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav ul li.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-left: 4px solid white;
+}
+
+.player-info {
+    margin-top: auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.coins, .level {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.coins i, .level i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #FFD700;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+h2 {
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.view {
+    display: none;
+}
+
+.view.active {
+    display: block;
+}
+
+.bazar-tabs, .inventory-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Titan One', cursive;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    background-color: var(--color-secondary);
+}
+
+.tab-btn.active {
+    background-color: var(--color-secondary);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.auction-items, .trade-items, .market-items, .pigs-inventory, .items-inventory, .stats-container, .profile-info, .settings-options, .credits-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    background-color: var(--color-container);
+    border-radius: 10px;
+    min-height: 300px;
+}
+
+.placeholder {
+    background-color: #e0e0e0;
+    height: 180px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.placeholder i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #bbb;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.team-member {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.member-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+.team-member h3 {
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    color: #666;
+    font-size: 14px;
+}
+
+.admin-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.admin-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--color-container);
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    width: 200px;
+    font-size: 16px;
+}
+
+.form-group input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.admin-save-btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Titan One', cursive;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.admin-save-btn:hover {
+    background-color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        display: flex;
+        overflow-x: auto;
+    }
+
+    nav ul li {
+        padding: 10px 15px;
+        white-space: nowrap;
+    }
+}
